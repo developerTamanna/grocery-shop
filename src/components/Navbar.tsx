@@ -1,5 +1,6 @@
 'use client';
 
+import Image from 'next/image';
 import Link from 'next/link';
 import { useState } from 'react';
 
@@ -79,11 +80,11 @@ export default function Navbar() {
 
       {/* Main Navigation */}
       <header className="bg-white shadow-lg sticky top-0 z-50">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div className="container mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex items-center justify-between h-16">
             {/* Logo */}
             <Link href="/" className="flex items-center">
-              <div className="text-2xl font-bold text-green-600">grocery</div>
+              <div className="text-2xl font-bold text-green-600">KachaBazer</div>
             </Link>
 
             {/* Desktop Navigation */}
@@ -145,7 +146,7 @@ export default function Navbar() {
                   placeholder="Search products..."
                   className="w-full px-4 py-2 border border-gray-300 rounded-l-md focus:outline-none focus:ring-2 focus:ring-green-500 focus:border-transparent"
                 />
-                <button className="absolute right-0 top-0 h-full px-4 bg-green-600 text-white rounded-r-md hover:bg-green-700 transition-colors">
+                <button  title="Search" className="absolute right-0 top-0 h-full px-4 bg-green-600 text-white rounded-r-md hover:bg-green-700 transition-colors">
                   <svg
                     className="w-5 h-5"
                     fill="none"
@@ -186,10 +187,11 @@ export default function Navbar() {
                   className="w-10 h-10 rounded-full overflow-hidden border-2 border-green-600 focus:outline-none focus:ring-2 focus:ring-green-400"
                   aria-label="User menu"
                 >
-                  {/* এখানে তুমি ডায়নামিক ইউজারের প্রোফাইল ছবি বসাবে */}
-                  <img
+                  
+                  <Image
                     src="/default-avatar.png"
                     alt="User Avatar"
+                    fill
                     className="w-full h-full object-cover"
                   />
                 </button>
@@ -226,7 +228,7 @@ export default function Navbar() {
               </div>
 
               {/* Cart Icon */}
-              <button className="p-2 text-gray-600 hover:text-green-600 transition-colors">
+              <button  title="icon" className="p-2 text-gray-600 hover:text-green-600 transition-colors">
                 <svg
                   className="w-6 h-6"
                   fill="none"
@@ -243,7 +245,7 @@ export default function Navbar() {
               </button>
 
               {/* User Icon (optional, kept from original) */}
-              <button className="p-2 text-gray-600 hover:text-green-600 transition-colors">
+              <button  title="user icon" className="p-2 text-gray-600 hover:text-green-600 transition-colors">
                 <svg
                   className="w-6 h-6"
                   fill="none"
@@ -295,7 +297,7 @@ export default function Navbar() {
                 placeholder="Search products..."
                 className="w-full px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-green-500 focus:border-transparent"
               />
-              <button className="absolute right-2 top-1/2 transform -translate-y-1/2 p-1 bg-green-600 text-white rounded-md hover:bg-green-700">
+              <button  title="Search" className="absolute right-2 top-1/2 transform -translate-y-1/2 p-1 bg-green-600 text-white rounded-md hover:bg-green-700">
                 <svg
                   className="w-4 h-4"
                   fill="none"
@@ -373,7 +375,7 @@ export default function Navbar() {
 
               {/* Mobile Icons */}
               <div className="flex justify-center space-x-6 pt-4 border-t">
-                <button className="p-2 text-gray-600 hover:text-green-600">
+                <button  title="icon" className="p-2 text-gray-600 hover:text-green-600">
                   <svg
                     className="w-6 h-6"
                     fill="none"
@@ -388,7 +390,7 @@ export default function Navbar() {
                     />
                   </svg>
                 </button>
-                <button className="p-2 text-gray-600 hover:text-green-600">
+                <button  title="Search" className="p-2 text-gray-600 hover:text-green-600">
                   <svg
                     className="w-6 h-6"
                     fill="none"

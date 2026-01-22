@@ -1,21 +1,20 @@
-import AboutHero from "./components/AboutHero";
+import Banner from "../components/Banner";
 import CTASection from "./components/CTASection";
+import Mission from "./components/Mission";
 import ProblemSection from "./components/ProblemSection";
 import SolutionSection from "./components/SolutionSection";
-import TechStack from "./components/TechStack";
 import UserRoles from "./components/UserRoles";
-import Vision from "./components/Vision";
+
 
 
 export default function page() {
   return (
-    <div className="space-y-20 py-16">
-      <AboutHero />
+    <div className="">
+      <Banner />
       <ProblemSection />
       <SolutionSection />
       <UserRoles />
-      <TechStack />
-      <Vision />
+      <Mission />
       <CTASection />
     </div>
   );
